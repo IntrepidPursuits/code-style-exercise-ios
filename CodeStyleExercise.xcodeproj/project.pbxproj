@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50D27EE1E087D7A009DF04E /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D27ED1E087D7A009DF04E /* ColorsViewController.xib */; };
+		A50D27F11E088345009DF04E /* ColorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D27EF1E088345009DF04E /* ColorsCollectionViewCell.swift */; };
+		A50D27F21E088345009DF04E /* ColorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D27F01E088345009DF04E /* ColorsCollectionViewCell.xib */; };
 		A5C308D61E01F7B900D95234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C308D51E01F7B900D95234 /* AppDelegate.swift */; };
-		A5C308D81E01F7B900D95234 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C308D71E01F7B900D95234 /* ViewController.swift */; };
-		A5C308DB1E01F7B900D95234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C308D91E01F7B900D95234 /* Main.storyboard */; };
+		A5C308D81E01F7B900D95234 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C308D71E01F7B900D95234 /* ColorsViewController.swift */; };
 		A5C308DD1E01F7B900D95234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C308DC1E01F7B900D95234 /* Assets.xcassets */; };
 		A5C308E01E01F7B900D95234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C308DE1E01F7B900D95234 /* LaunchScreen.storyboard */; };
 		A5C308EB1E01F7B900D95234 /* CodeStyleExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C308EA1E01F7B900D95234 /* CodeStyleExerciseTests.swift */; };
@@ -34,10 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A50D27ED1E087D7A009DF04E /* ColorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
+		A50D27EF1E088345009DF04E /* ColorsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A50D27F01E088345009DF04E /* ColorsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5C308D21E01F7B900D95234 /* CodeStyleExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeStyleExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C308D51E01F7B900D95234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5C308D71E01F7B900D95234 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5C308DA1E01F7B900D95234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5C308D71E01F7B900D95234 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		A5C308DC1E01F7B900D95234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C308DF1E01F7B900D95234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5C308E11E01F7B900D95234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				A5C308D51E01F7B900D95234 /* AppDelegate.swift */,
-				A5C308D71E01F7B900D95234 /* ViewController.swift */,
-				A5C308D91E01F7B900D95234 /* Main.storyboard */,
+				A5C308D71E01F7B900D95234 /* ColorsViewController.swift */,
+				A50D27ED1E087D7A009DF04E /* ColorsViewController.xib */,
+				A50D27EF1E088345009DF04E /* ColorsCollectionViewCell.swift */,
+				A50D27F01E088345009DF04E /* ColorsCollectionViewCell.xib */,
 				A5C308DC1E01F7B900D95234 /* Assets.xcassets */,
 				A5C308DE1E01F7B900D95234 /* LaunchScreen.storyboard */,
 				A5C308E11E01F7B900D95234 /* Info.plist */,
@@ -235,8 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C308E01E01F7B900D95234 /* LaunchScreen.storyboard in Resources */,
+				A50D27EE1E087D7A009DF04E /* ColorsViewController.xib in Resources */,
+				A50D27F21E088345009DF04E /* ColorsCollectionViewCell.xib in Resources */,
 				A5C308DD1E01F7B900D95234 /* Assets.xcassets in Resources */,
-				A5C308DB1E01F7B900D95234 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C308D81E01F7B900D95234 /* ViewController.swift in Sources */,
+				A5C308D81E01F7B900D95234 /* ColorsViewController.swift in Sources */,
 				A5C308D61E01F7B900D95234 /* AppDelegate.swift in Sources */,
+				A50D27F11E088345009DF04E /* ColorsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +306,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5C308D91E01F7B900D95234 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5C308DA1E01F7B900D95234 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5C308DE1E01F7B900D95234 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,6 +513,7 @@
 				A5C308FC1E01F7B900D95234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C308FD1E01F7B900D95234 /* Build configuration list for PBXNativeTarget "CodeStyleExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +522,7 @@
 				A5C308FF1E01F7B900D95234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C309001E01F7B900D95234 /* Build configuration list for PBXNativeTarget "CodeStyleExerciseUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +531,7 @@
 				A5C309021E01F7B900D95234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
