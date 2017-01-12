@@ -1,14 +1,12 @@
-/*****************************************
- *  ColorsCollectionViewCell.swift       *
- *  CodeStyleExercise                    *
- *                                       *
- *  Created by Maya Saxena on 12/19/16.  *
- *****************************************/
+//
+//  ColorsViewController.swift
+//  CodeStyleExercise
+//
+//  Created by Maya Saxena on 12/19/16.
+//
+//
 
 import UIKit
-import Foundation
-import AudioUnit
-import CoreBluetooth
 
 class ColorsCollectionViewCell: UICollectionViewCell {
 
