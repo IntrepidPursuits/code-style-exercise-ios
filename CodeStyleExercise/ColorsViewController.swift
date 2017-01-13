@@ -17,7 +17,7 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var colorCountTextField: UITextField!
 
-    var ct: Int? = 12
+    var countOfColorSquares: Int? = 12
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +74,7 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     // It makes the colorsCountTextField resign first responder and sets colors count to the int value of the colorsCountTextField text
     @IBAction func userDidTapOnTheBackgroundView(_ sender: UITapGestureRecognizer) {
         colorCountTextField.resignFirstResponder()
-        ct = Int(colorCountTextField.text ?? "")
+        countOfColorSquares = Int(colorCountTextField.text ?? "")
     }
 
     @IBAction func btnPressed(_ sender: Any) {
