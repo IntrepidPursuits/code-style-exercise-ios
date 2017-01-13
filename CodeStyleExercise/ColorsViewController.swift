@@ -22,7 +22,6 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "ColorsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-
         self.colorCountTextField.placeholder = "12"
     }
 
@@ -37,12 +36,9 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var c = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ColorsCollectionViewCell
-//        let color = UIColor.random
-//        c.backgroundColor = color
-//        c.hexColorLbl.text = color.description
-        c.configureCellWithColor(color: random_ui_color())
-        return c
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ColorsCollectionViewCell
+        collectionViewCell.configureCellWithColor(color: random_ui_color())
+        return collectionViewCell
     }
 
 
@@ -55,8 +51,8 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.characters.count > 0 {
             if (textField.text! as NSString).replacingCharacters(in: range, with: string).characters.count <= 2 {
-                var str = string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined() // Filters string by removing non-decimal digits
-                return string == str
+                let numberString = string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined() // Filters string by removing non-decimal digits
+                return string == numberString
             } else {
                 return false
             }
