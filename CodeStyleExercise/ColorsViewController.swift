@@ -8,56 +8,42 @@
 
 import UIKit
 
-class ColorsViewController : UIViewController, UICollectionViewDataSource, UITextFieldDelegate
-{
+class ColorsViewController: UIViewController, UICollectionViewDataSource, UITextFieldDelegate {
 
     class constants {
-        static let DFLTNUMCOLORS:Int=12
+        static let DFLTNUMCOLORS: Int = 12
     }
 
-    @IBOutlet weak var collectionView:UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var colorCountTextField: UITextField!
 
-    var ct: Int? = 12
+    var countOfColorSquares: Int? = 12
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "ColorsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-
         self.colorCountTextField.placeholder = "12"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    // MARK: Collection View Data Source Methods
 
-    // MARK: - Collection View Data Source Methods
-
-    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section : Int) -> Int{
-        return ct!
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return countOfColorSquares ?? 12
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var c = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ColorsCollectionViewCell
-//        let color = UIColor.random
-//        c.backgroundColor = color
-//        c.hexColorLbl.text = color.description
-        c.configureCellWithColor(color: random_ui_color())
-        return c
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ColorsCollectionViewCell
+        collectionViewCell.configureCellWithColor(color: random_ui_color())
+        return collectionViewCell
     }
 
-
-
-
-    //////////////////////////////////
-    // MARK: - UITextFieldDelegate ///
-    //////////////////////////////////
+    //  MARK: UITextField Delegate
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.characters.count>0{
+        if string.characters.count > 0 {
             if (textField.text! as NSString).replacingCharacters(in: range, with: string).characters.count <= 2 {
-                var str = string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined() // Filters string by removing non-decimal digits
-                return string == str
+                let numberString = string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined() // Filters string by removing non-decimal digits
+                return string == numberString
             } else {
                 return false
             }
@@ -67,15 +53,13 @@ class ColorsViewController : UIViewController, UICollectionViewDataSource, UITex
         }
     }
 
-
-
-    // MARK: - IBActions
+    // MARK: IBActions
 
     // This IBAction is called when the user taps on the background view
     // It makes the colorsCountTextField resign first responder and sets colors count to the int value of the colorsCountTextField text
     @IBAction func userDidTapOnTheBackgroundView(_ sender: UITapGestureRecognizer) {
         colorCountTextField.resignFirstResponder()
-        ct = Int(colorCountTextField.text ?? "")
+        countOfColorSquares = Int(colorCountTextField.text ?? "")
     }
 
     @IBAction func btnPressed(_ sender: Any) {
@@ -90,6 +74,3 @@ class ColorsViewController : UIViewController, UICollectionViewDataSource, UITex
     }
 
 }
-
-
-
