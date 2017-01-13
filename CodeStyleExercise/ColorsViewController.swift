@@ -8,14 +8,13 @@
 
 import UIKit
 
-class ColorsViewController : UIViewController, UICollectionViewDataSource, UITextFieldDelegate
-{
+class ColorsViewController: UIViewController, UICollectionViewDataSource, UITextFieldDelegate {
 
     class constants {
-        static let DFLTNUMCOLORS:Int=12
+        static let DFLTNUMCOLORS: Int = 12
     }
 
-    @IBOutlet weak var collectionView:UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var colorCountTextField: UITextField!
 
     var ct: Int? = 12
@@ -33,8 +32,8 @@ class ColorsViewController : UIViewController, UICollectionViewDataSource, UITex
 
     // MARK: - Collection View Data Source Methods
 
-    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section : Int) -> Int{
-        return ct!
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return countOfColorSquares ?? 12
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,7 +53,7 @@ class ColorsViewController : UIViewController, UICollectionViewDataSource, UITex
     //////////////////////////////////
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.characters.count>0{
+        if string.characters.count > 0 {
             if (textField.text! as NSString).replacingCharacters(in: range, with: string).characters.count <= 2 {
                 var str = string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined() // Filters string by removing non-decimal digits
                 return string == str
