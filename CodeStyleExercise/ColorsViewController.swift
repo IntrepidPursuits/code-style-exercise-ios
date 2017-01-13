@@ -25,11 +25,7 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
         self.colorCountTextField.placeholder = "12"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Collection View Data Source Methods
+    // MARK: Collection View Data Source Methods
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return countOfColorSquares ?? 12
@@ -41,12 +37,7 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
         return collectionViewCell
     }
 
-
-
-
-    //////////////////////////////////
-    // MARK: - UITextFieldDelegate ///
-    //////////////////////////////////
+    //  MARK: UITextField Delegate
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.characters.count > 0 {
@@ -62,9 +53,7 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
         }
     }
 
-
-
-    // MARK: - IBActions
+    // MARK: IBActions
 
     // This IBAction is called when the user taps on the background view
     // It makes the colorsCountTextField resign first responder and sets colors count to the int value of the colorsCountTextField text
@@ -85,6 +74,3 @@ class ColorsViewController: UIViewController, UICollectionViewDataSource, UIText
     }
 
 }
-
-
-
