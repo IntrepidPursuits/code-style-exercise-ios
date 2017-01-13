@@ -22,7 +22,7 @@ class ColorsCollectionViewCell: UICollectionViewCell {
 
     func configureCellWithColor(color: UIColor) -> () {
         backgroundColor = color
-        hexColorLbl.textColor = color.val > 0.5 ? UIColor.black : UIColor.white
+        hexColorLbl.textColor = color.rgbContrastScore > 0.5 ? UIColor.black : UIColor.white
         hexColorLbl.text = "#\(color.colorConvertedToHexStringOfLengthSix())"
     }
 }
@@ -40,7 +40,7 @@ extension UIColor {
     }
 
     // This val represents the constrast score of the UIColor. If it is over 0.5, it is lighter, and if it is under, it is darker
-    var val: CGFloat {
+    var rgbContrastScore: CGFloat {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
