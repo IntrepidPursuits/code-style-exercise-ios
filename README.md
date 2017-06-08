@@ -1,5 +1,4 @@
 # Exercise - iOS Code Style
-### Winter 2017 - iOS
 
 ### Overview:
 Practice writing and refactoring clean code with good style
@@ -19,7 +18,7 @@ Practice writing and refactoring clean code with good style
 
 ### The App:
 
-The app uses a `CollectionView` to display a randomized color palette.  When a colored square is tapped, its hex value appears in either black or white depending on the lightness or darkness of the color. When the "Generate New Colors" button is tapped, the palette refreshes and displays the user-defined number of colored squares. If no value is specified, it defaults to 12 squares.
+The app uses a `UICollectionView` to display a randomized color palette.  When a colored square is tapped, its hex value appears in either black or white depending on the lightness or darkness of the color. When the "Generate New Colors" button is tapped, the palette refreshes and displays the user-defined number of colored squares. If no value is specified, it defaults to 12 squares.
 
 ### Your Task:
 
